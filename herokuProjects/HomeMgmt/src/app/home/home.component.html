@@ -1,0 +1,27 @@
+<div class="well">
+	<h4>Welcome to the Home Management System.</h4>
+	<div *ngIf="auth.authenticated() && auth.userProfile">
+		<h5>You are logged in as {{auth.userProfile.email}}</h5>
+	</div>
+	<h5>
+		<p>Home Management System helps in making your life easy. Home
+			Management System can manage your day to day task list and grocery
+			list.</p>
+	</h5>
+	<h5 *ngIf="!auth.authenticated()">
+		<p>
+			Home Management System is protected and require user authentication.
+			In order to use this system, please 'SIGN UP' or request user
+			credential by clicking <u><a
+				href="mailto:ysanjeev@yahoo.com?subject=Credential%20request%20for%20Home%20Management%20System&amp;body=Hello%2C%0A%20%20%20Please%20provide%20me%20the%20user%2F%20password%20for%20the%20Home%20Management%20System.%0AMy%20Detail%20is%20given%20below%3A%0AFull%20Name%3A%0AE-mail%20Address%3A%0ACountry%3A%0AThanks.%0A">Request
+					Credential</a> </u>link. If you already have credential then please click
+			'Log In' button to login.
+		</p>
+	</h5>
+	<h5>
+		If you have any question regarding Home Management System. Please
+		e-mail us using <u> <a
+			href="mailto:ysanjeev@yahoo.com?subject=Home%20Management%20System%20Support&amp;body=Hi%20There!%2C%0A%20%20%20I%20have%20following%20questions%20regarding%20Home%20Management%20System%3A%0A%0A%0A%0AMy%20detail%20is%20giving%20below%3A%0AEmail%20Address%3A%0AName%3A%0ACountry%3A%0AThanks.">Support</a>
+		</u> link.
+	</h5>
+</div>

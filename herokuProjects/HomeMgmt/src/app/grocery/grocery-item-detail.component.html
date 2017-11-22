@@ -1,0 +1,33 @@
+    <h2>Update Grocery Item</h2>
+    
+    
+    <div class="container">
+    <h3>"{{groceryListItem.name}}"</h3>
+    <div class="form-group">  
+        <div class="row">
+			<div class="col-xs-12">
+			<label for="description">Description:  </label>
+				      <input class="form-control" id="description"  [(ngModel)]="groceryListItem.description" name="description" placeholder="description"/>
+			</div>
+				      
+    	</div>  
+	  	<div class="row">
+			<div class="col-md-1" >
+				      <label for="qty">Qty: </label>
+				      <input class="form-control" id="qty" [(ngModel)]="groceryListItem.qty" name="qty" type="number" placeholder="qty"/>
+			</div>
+			<div class="col-md-3">
+				      <label for="unit">Unit: </label>
+				      <input class="form-control" id="unit" [(ngModel)]="groceryListItem.unit" name="unit" placeholder="unit"/>
+			
+			</div>
+			<div class="col-md-3">
+			      <label >Purchased? <input class="form-control" type="checkbox" [checked]="groceryListItem.isPurchased" > </label>
+			</div>     
+	    </div>
+	    </div>
+    <p>
+      <button (click)="updateGroceryListItem()" class="btn btn-primary">Save and Go Back</button>
+    </p>
+    </div>
+    

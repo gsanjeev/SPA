@@ -1,0 +1,14 @@
+<h2>Home Management System</h2>
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a routerLink="/home" routerLinkActive="active">Home</a> 
+			<a routerLink="/task-list" routerLinkActive="active">Tasks List</a> 
+			<a routerLink="/grocery-list" routerLinkActive="active">Grocery List</a> 
+			<a routerLink="/cooking-video" routerLinkActive="active">Cooking Videos</a> 
+			<a (click)="auth.login()" *ngIf="!auth.authenticated()">Log In</a>
+			<a (click)="auth.logout()"  *ngIf="auth.authenticated()">Log Out</a>
+		</div>
+	</div>
+</nav>
+<router-outlet></router-outlet>

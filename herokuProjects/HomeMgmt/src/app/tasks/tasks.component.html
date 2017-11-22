@@ -1,0 +1,35 @@
+<h3>Tasks</h3>
+
+<form class="well">
+	<div class="input-group">
+		<input type="text" class="form-control" [(ngModel)]="title"
+			(keydown)="addTask($event)" name="title" placeholder="Add New Task">
+		<span class="input-group-btn">
+			<button type="submit" class="btn btn-default btn-info"
+				(click)="createNewTask($event)">Add New Task</button>
+		</span>
+	</div>
+</form>
+<div class="table-responsive">
+	<table class="table table-striped table-condensed">
+		<thead>
+			<tr>
+				<th>Index</th>
+				<th>Task</th>
+				<th>Completion Status</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tr *ngFor="let task of tasks; let i = index">
+			<td class="col-md-1"><span class="badge">{{i+1}}</span></td>
+
+			<td class="col-md-10">{{task.title| uppercase}}</td>
+
+			<td class="col-md-1"><input type="checkbox"
+				[checked]="task.isDone" (click)="updateStatus(task)"></td>
+			<td class="col-md-1"><input type="button"
+				(click)="deleteTask(task._id)" value="Delete" class="btn-warning">
+			</td>
+		</tr>
+	</table>
+</div>
